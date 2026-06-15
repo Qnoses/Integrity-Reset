@@ -42,7 +42,7 @@ session and trust cookies survive. That's the whole point.
 
 1. Go to `chrome://extensions`.
 2. Turn on **Developer mode** (top-right).
-3. Click **Load unpacked** and select this `integrity-reset` folder.
+3. Click **Load unpacked** and select this `Integrity-Reset` folder.
 4. Pin the icon to the toolbar (puzzle-piece menu → pin).
 5. After editing any file later, click **Reload** on the extension's card.
 
