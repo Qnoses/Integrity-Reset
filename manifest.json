@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Integrity Reset",
+  "version": "1.1.1",
+  "description": "Recover from bot/integrity failures on heavy ad-blocker & userscript setups: disable extensions, clear tab state, keep cookies.",
+  "permissions": ["management", "scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": { "service_worker": "background.js" },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Integrity Reset"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": { "default": "Alt+Shift+R" },
+      "description": "Open the Integrity Reset menu"
+    }
+  }
+}

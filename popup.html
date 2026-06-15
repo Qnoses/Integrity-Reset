@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  :root { color-scheme: dark; }
+  body { margin: 0; width: 266px; font: 13px/1.4 system-ui, sans-serif; background: #1b1b1f; color: #e8e8ea; }
+  .wrap { padding: 12px; }
+  h1 { font-size: 11px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: #a8a8b0; margin: 0 0 10px; }
+  button { display: block; width: 100%; text-align: left; border: 1px solid #34343a; background: #232329; color: #e8e8ea; border-radius: 8px; padding: 9px 11px; margin: 0 0 8px; cursor: pointer; font: inherit; }
+  button:hover { background: #2c2c34; border-color: #45454d; }
+  button .sub { display: block; font-size: 11px; color: #9a9aa2; margin-top: 2px; }
+  button.primary { background: #5a2ca0; border-color: #7a44c8; }
+  button.primary:hover { background: #6a36bd; }
+  button.danger:hover { border-color: #c0556a; }
+  .divider { font-size: 10px; text-transform: uppercase; letter-spacing: .06em; color: #6f6f78; margin: 4px 0 8px; }
+  #status { margin-top: 8px; padding-top: 9px; border-top: 1px solid #2c2c34; font-size: 12px; }
+  #status.off { color: #ff7a8a; }
+  #status.ok { color: #7bd88f; }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Integrity Reset</h1>
+
+    <button id="reset" class="primary">
+      Reset ritual
+      <span class="sub">Disable all extensions, clear this tab, reload &mdash; cookies kept</span>
+    </button>
+
+    <div class="divider">Granular</div>
+
+    <button id="disable">
+      Disable all extensions
+      <span class="sub">No clear, no reload</span>
+    </button>
+
+    <button id="clear">
+      Clear this tab + reload
+      <span class="sub">localStorage / IndexedDB / caches / SW &mdash; cookies kept</span>
+    </button>
+
+    <button id="reenable" class="danger">
+      Re-enable all extensions
+      <span class="sub">Restore what this tool disabled</span>
+    </button>
+
+    <div id="status" class="ok">All extensions enabled</div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
